@@ -11,11 +11,10 @@ function PageLayout({ children }) {
   }, [])
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f1f5f9' }}>
+    <div className="app-layout">
       <Sidebar />
       <div style={{
-        marginLeft: isMobile ? '0' : '240px',
-        paddingTop: isMobile ? '56px' : '0',
+        marginLeft: isMobile ? '0' : '296px',
         flex: 1,
         padding: isMobile ? '16px' : '32px',
         paddingTop: isMobile ? '72px' : '32px',

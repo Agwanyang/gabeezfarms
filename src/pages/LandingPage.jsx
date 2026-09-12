@@ -137,44 +137,44 @@ function LandingPage() {
     <div className="font-sans overflow-x-hidden" style={{ scrollBehavior: 'smooth' }}>
 
       {/* NAVBAR */}
-      <nav className={'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ' + (scrolled ? 'bg-white shadow-lg py-3' : 'bg-transparent py-5')}>
-        <div className="max-w-6xl mx-auto px-5 flex justify-between items-center">
+      <nav className="fixed top-4 left-4 right-4 z-50">
+        <div className={'max-w-6xl mx-auto px-4 md:px-5 py-3 flex justify-between items-center rounded-[24px] border backdrop-blur-xl transition-all duration-500 ' + (scrolled ? 'bg-white/85 border-white/90 shadow-xl shadow-black/10' : 'bg-white/10 border-white/25 shadow-2xl shadow-black/10')}>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-700 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-md">G</div>
+            <div className="w-10 h-10 bg-gradient-to-br from-green-300 to-green-700 rounded-2xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-green-900/20">G</div>
             <div>
-              <div className={scrolled ? 'text-green-900 font-black text-base' : 'text-white font-black text-base'}>Gabeez Green Farms</div>
-              <div className={scrolled ? 'text-green-600 text-xs' : 'text-green-300 text-xs'}>Fresh. Natural. Trusted.</div>
+              <div className={scrolled ? 'text-green-950 font-black text-base' : 'text-white font-black text-base'}>Gabeez Green Farms</div>
+              <div className={scrolled ? 'text-green-700 text-xs' : 'text-green-100 text-xs'}>Fresh. Natural. Trusted.</div>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-2">
             {['About', 'Products', 'Why Us', 'Contact'].map((item, i) => (
               <a key={i} href={'#' + item.toLowerCase().replace(' ', '-')}
-                className={'text-sm font-medium transition-colors ' + (scrolled ? 'text-gray-600 hover:text-green-700' : 'text-white/80 hover:text-white')}>
+                className={'px-3 py-2 rounded-full text-sm font-medium transition-all hover:bg-white/20 ' + (scrolled ? 'text-gray-600 hover:text-green-700' : 'text-white/85 hover:text-white')}>
                 {item}
               </a>
             ))}
-            <Link to="/blog" className={'text-sm font-medium transition-colors ' + (scrolled ? 'text-gray-600 hover:text-green-700' : 'text-white/80 hover:text-white')}>
+            <Link to="/blog" className={'px-3 py-2 rounded-full text-sm font-medium transition-all hover:bg-white/20 ' + (scrolled ? 'text-gray-600 hover:text-green-700' : 'text-white/85 hover:text-white')}>
              Blog
             </Link>
-            <Link to="/shop" className="bg-green-500 hover:bg-green-400 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-green-400/30 hover:scale-105">
+            <Link to="/shop" className="ml-2 bg-green-500 hover:bg-green-400 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-green-900/20 hover:scale-105">
               Order Now
             </Link>
           </div>
-          <button onClick={() => setMenuOpen(!menuOpen)} className={'md:hidden p-2 rounded-lg ' + (scrolled ? 'text-gray-700' : 'text-white')}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className={'md:hidden p-2 rounded-xl ' + (scrolled ? 'text-gray-700' : 'text-white')}>
             <div className={'w-5 h-0.5 bg-current transition-all ' + (menuOpen ? 'rotate-45 translate-y-1.5' : '')} style={{ marginBottom: menuOpen ? 0 : 4 }}></div>
             <div className={'w-5 h-0.5 bg-current transition-all ' + (menuOpen ? 'opacity-0' : '')} style={{ marginBottom: 4 }}></div>
             <div className={'w-5 h-0.5 bg-current transition-all ' + (menuOpen ? '-rotate-45 -translate-y-1.5' : '')}></div>
           </button>
         </div>
         {menuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 px-5 py-4 flex flex-col gap-4 shadow-xl">
+          <div className="md:hidden mt-2 bg-white/90 border border-white px-5 py-4 rounded-[20px] flex flex-col gap-3 shadow-xl backdrop-blur-xl">
             {['About', 'Products', 'Why Us', 'Contact'].map((item, i) => (
               <a key={i} href={'#' + item.toLowerCase().replace(' ', '-')}
                 onClick={() => setMenuOpen(false)} className="text-gray-700 text-sm font-medium hover:text-green-600">
                 {item}
               </a>
             ))}
-            <Link to="/blog" className={'text-sm font-medium transition-colors ' + (scrolled ? 'text-gray-600 hover:text-green-700' : 'text-white/80 hover:text-white')}>
+            <Link to="/blog" className="text-gray-700 text-sm font-medium hover:text-green-600">
              Blog
             </Link>
             <Link to="/shop" onClick={() => setMenuOpen(false)} className="bg-green-600 text-white px-5 py-3 rounded-xl text-sm font-bold text-center">
@@ -584,42 +584,38 @@ function LandingPage() {
       </div>
 
       {/* FOOTER */}
-      <div style={{ background: '#0a0a0a', padding: '48px 20px' }}>
-        <div style={{ maxWidth: 1152, margin: '0 auto' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: 24, marginBottom: 32, paddingBottom: 32, borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <div style={{ width: 44, height: 44, background: 'linear-gradient(135deg, #4ade80, #16a34a)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 900, fontSize: 18 }}>G</div>
+      <footer className="farm-footer">
+        <div className="farm-footer-panel">
+          <div className="farm-footer-top">
+            <div className="farm-footer-brand">
+              <div className="farm-footer-logo">G</div>
               <div>
-                <div style={{ color: 'white', fontWeight: 900, fontSize: 15 }}>Gabeez Green Farms</div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11 }}>Fresh. Natural. Trusted.</div>
+                <div className="farm-footer-name">Gabeez Green Farms</div>
+                <div className="farm-footer-tagline">Fresh. Natural. Trusted.</div>
               </div>
             </div>
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div className="farm-footer-copy">
+              <span className="farm-footer-kicker">Grown with care</span>
+              <span>Good food, closer to home.</span>
+            </div>
+            <div className="farm-footer-links">
               {['About', 'Products', 'Why Us', 'Contact'].map((item, i) => (
-                <a key={i} href={'#' + item.toLowerCase().replace(' ', '-')} style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#4ade80'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>
+                <a key={i} href={'#' + item.toLowerCase().replace(' ', '-')}>
                   {item}
                 </a>
               ))}
+              <Link to="/shop" className="farm-footer-order">Order fresh produce <span>↗</span></Link>
             </div>
-            {/* <Link to="/shop" style={{ background: '#16a34a', color: 'white', padding: '10px 24px', borderRadius: 50, fontSize: 13, fontWeight: 700, textDecoration: 'none', transition: 'all 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.background = '#22c55e'}
-              onMouseLeave={e => e.currentTarget.style.background = '#16a34a'}>
-              Order Now
-            </Link> */}
           </div>
-          <div style={{ textAlign: 'center' }}>
-            <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: 12, marginBottom: 4 }}>Always Fresh From The Greenhouse Down To Your Household</p>
-            <p style={{ color: 'rgba(255,255,255,0.15)', fontSize: 11, marginBottom: 8 }}>2026 Gabeez Green Farms. All rights reserved.</p>
-            <Link to="/login" style={{ color: 'rgba(255,255,255,0.15)', fontSize: 11, textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.15)'}>
-              ©
-            </Link>
+          <div className="farm-footer-bottom">
+            <p>Always fresh from the greenhouse down to your household.</p>
+            <div>
+              <span>© 2026 Gabeez Green Farms</span>
+              <Link to="/login" className="farm-footer-login" aria-label="Team login" title="Team login">⌘</Link>
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
 
     </div>
   )
