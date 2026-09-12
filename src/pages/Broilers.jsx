@@ -153,7 +153,7 @@ function Broilers() {
   return (
     <PageLayout>
       {/* Header */}
-      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+      <div className="mb-6 flex flex-col items-stretch justify-between gap-4 sm:flex-row sm:items-start">
         <div>
           <h1 className="text-2xl font-bold text-slate-800">Broiler Records</h1>
           <p className="text-slate-500 mt-1 text-sm">Track batches, expenses, deaths, sales and profit/loss</p>
@@ -161,7 +161,7 @@ function Broilers() {
         <button
           type="button"
           onClick={importCleanBatches}
-          className="rounded-xl border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-700 shadow-sm hover:bg-green-50"
+          className="w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700 shadow-sm hover:bg-green-100 sm:w-auto sm:bg-white sm:px-4 sm:py-2"
         >
           Import clean Batch 1-6
         </button>
