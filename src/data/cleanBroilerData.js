@@ -71,7 +71,7 @@ export const cleanBroilerSales = [
   { id: 'SALE-007', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 1, weightPerBird: '', pricePerBird: 0, buyerName: 'D', notes: 'Price missing in original sheet; included in bird count but excluded from revenue.' },
   { id: 'SALE-008', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 1, weightPerBird: '', pricePerBird: 8500, buyerName: '', notes: 'Sale row 8.' },
   { id: 'SALE-009', batchId: 'BATCH-002', date: '2026-02-19', numberOfBirds: 70, weightPerBird: '', pricePerBird: 7500, buyerName: '', notes: 'Source records 70 birds sold at 7500 each; aggregate sale row.' },
-  { id: 'SALE-010', batchId: 'BATCH-003', date: '', numberOfBirds: 29, weightPerBird: '', pricePerBird: 0, buyerName: 'GH6', notes: 'Sale count from Poultry Death sheet; sale date and price not provided.' },
-  { id: 'SALE-011', batchId: 'BATCH-003', date: '', numberOfBirds: 44, weightPerBird: '', pricePerBird: 0, buyerName: 'GH2', notes: 'Sale count from Poultry Death sheet; sale date and price not provided.' },
+  { id: 'SALE-010', batchId: 'BATCH-003', date: '', numberOfBirds: 29, weightPerBird: '', pricePerBird: 8000, buyerName: 'GH6', notes: 'Sale count from Poultry Death sheet; price uses the Batch 3 average sale price of 8000.' },
+  { id: 'SALE-011', batchId: 'BATCH-003', date: '', numberOfBirds: 44, weightPerBird: '', pricePerBird: 8000, buyerName: 'GH2', notes: 'Sale count from Poultry Death sheet; price uses the Batch 3 average sale price of 8000.' },
   { id: 'SALE-012', batchId: 'BATCH-003', date: '2026-03-26', numberOfBirds: 100, weightPerBird: 2.3, pricePerBird: 8000, buyerName: '', isProjection: true, notes: 'Third Batch sheet records 100 birds at 6 weeks, 2.3kg average, and 8000 sale price; completion status conflicts with the 73 actual sales record.' },
 ]

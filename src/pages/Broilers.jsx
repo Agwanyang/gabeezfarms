@@ -76,7 +76,10 @@ function Broilers() {
 
     const purchaseCost = (Number(batch.numberOfBirds) * Number(batch.costPerBird)) || 0
     const transportCost = Number(batch.transportCost) || 0
-    const totalExpenses = batchExpenses.reduce((sum, e) => sum + (Number(e.amount) || 0), 0)
+    const totalExpenses = batchExpenses.reduce((sum, e) => {
+      const isDuplicateTransport = String(e.type).toLowerCase() === 'transport' && transportCost > 0
+      return sum + (isDuplicateTransport ? 0 : (Number(e.amount) || 0))
+    }, 0)
     const totalCost = purchaseCost + transportCost + totalExpenses
 
     const totalDeaths = Number(batch.deathsOnArrival || 0) + batchDeaths.reduce((sum, d) => sum + (Number(d.numberOfDeaths) || 0), 0)
