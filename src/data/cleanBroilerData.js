@@ -43,3 +43,18 @@ export const cleanBroilerExpenses = [
   { id: 'EXP-033', batchId: 'BATCH-006', date: '2026-07-30', type: 'Kerosene', amount: 0, notes: 'Listed as zero; confirm before treating as free.' },
   { id: 'EXP-034', batchId: 'BATCH-006', date: '2026-07-30', type: 'Medication', amount: 0, notes: 'Listed as zero; confirm before treating as free.' },
 ]
+
+export const cleanBroilerDeaths = [
+  { id: 'DEATH-001', batchId: 'BATCH-001', date: '2026-01-08', numberOfDeaths: 5, cause: '', notes: 'Source records 5 birds died; cause not provided.' },
+]
+
+export const cleanBroilerSales = [
+  { id: 'SALE-001', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 20, weightPerBird: '', pricePerBird: 7700, buyerName: '', notes: 'Sale row 1.' },
+  { id: 'SALE-002', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 4, weightPerBird: '', pricePerBird: 5000, buyerName: 'D', notes: 'Buyer marker D.' },
+  { id: 'SALE-003', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 10, weightPerBird: '', pricePerBird: 8000, buyerName: '', notes: 'Sale row 3.' },
+  { id: 'SALE-004', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 4, weightPerBird: '', pricePerBird: 8500, buyerName: '', notes: 'Sale row 4.' },
+  { id: 'SALE-005', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 2, weightPerBird: '', pricePerBird: 11000, buyerName: '', notes: 'Sale row 5.' },
+  { id: 'SALE-006', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 3, weightPerBird: '', pricePerBird: 6000, buyerName: 'D', notes: 'Buyer marker D.' },
+  { id: 'SALE-007', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 1, weightPerBird: '', pricePerBird: 0, buyerName: 'D', notes: 'Price missing in original sheet; included in bird count but excluded from revenue.' },
+  { id: 'SALE-008', batchId: 'BATCH-001', date: '2026-01-08', numberOfBirds: 1, weightPerBird: '', pricePerBird: 8500, buyerName: '', notes: 'Sale row 8.' },
+]

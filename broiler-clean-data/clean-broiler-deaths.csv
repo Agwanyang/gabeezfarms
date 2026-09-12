@@ -1,1 +1,2 @@
 deathId,batchId,date,numberOfDeaths,cause,notes,sourceSheet
+DEATH-001,BATCH-001,2026-01-08,5,,"Source records 5 birds died; cause not provided",Poultry Death

@@ -1,1 +1,9 @@
 saleId,batchId,date,numberOfBirds,weightPerBird,pricePerBird,buyerName,notes,sourceSheet
+SALE-001,BATCH-001,2026-01-08,20,,7700,,"Sale row 1",First Birds Batch Sales
+SALE-002,BATCH-001,2026-01-08,4,,5000,D,"Buyer marker D",First Birds Batch Sales
+SALE-003,BATCH-001,2026-01-08,10,,8000,,"Sale row 3",First Birds Batch Sales
+SALE-004,BATCH-001,2026-01-08,4,,8500,,"Sale row 4",First Birds Batch Sales
+SALE-005,BATCH-001,2026-01-08,2,,11000,,"Sale row 5",First Birds Batch Sales
+SALE-006,BATCH-001,2026-01-08,3,,6000,D,"Buyer marker D",First Birds Batch Sales
+SALE-007,BATCH-001,2026-01-08,1,0,0,D,"Price missing in original sheet; included in bird count but excluded from revenue",First Birds Batch Sales
+SALE-008,BATCH-001,2026-01-08,1,,8500,,"Sale row 8",First Birds Batch Sales

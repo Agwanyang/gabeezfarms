@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { collection, addDoc, getDocs, deleteDoc, updateDoc, setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import PageLayout from '../components/PageLayout'
-import { cleanBroilerBatches, cleanBroilerExpenses } from '../data/cleanBroilerData'
+import { cleanBroilerBatches, cleanBroilerExpenses, cleanBroilerDeaths, cleanBroilerSales } from '../data/cleanBroilerData'
 
 function Broilers() {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -58,6 +58,8 @@ function Broilers() {
       await Promise.all([
         ...cleanBroilerBatches.map(({ id, ...batch }) => setDoc(doc(db, 'broilerBatches', id), { ...batch, createdAt: serverTimestamp() }, { merge: true })),
         ...cleanBroilerExpenses.map(({ id, ...expense }) => setDoc(doc(db, 'broilerExpenses', id), { ...expense, createdAt: serverTimestamp() }, { merge: true })),
+        ...cleanBroilerDeaths.map(({ id, ...death }) => setDoc(doc(db, 'broilerDeaths', id), { ...death, createdAt: serverTimestamp() }, { merge: true })),
+        ...cleanBroilerSales.map(({ id, ...sale }) => setDoc(doc(db, 'broilerSales', id), { ...sale, createdAt: serverTimestamp() }, { merge: true })),
       ])
       showMsg('Cleaned Batch 1-6 records imported without deleting existing data.')
       fetchAll()
