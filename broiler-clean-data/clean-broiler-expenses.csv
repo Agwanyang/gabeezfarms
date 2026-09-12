@@ -1,0 +1,35 @@
+expenseId,batchId,date,type,amount,quantity,unitPrice,notes,sourceSheet
+EXP-001,BATCH-001,2026-02-19,Feed,120000,5,,"Combined feed total",First Batch Expenditure
+EXP-002,BATCH-001,2026-02-19,Medication,10000,1,10000,"Medication",First Batch Expenditure
+EXP-003,BATCH-001,2026-02-19,Vaccine,15000,1,15000,"Vaccine",First Batch Expenditure
+EXP-004,BATCH-001,2026-02-19,Kerosene,8000,1,8000,"Kerosene",First Batch Expenditure
+EXP-005,BATCH-001,2026-02-19,Saw Shaving,3000,2,1500,"Saw shaving",First Batch Expenditure
+EXP-006,BATCH-001,2026-02-19,Charcoal,5000,1,5000,"Charcoal",First Batch Expenditure
+EXP-007,BATCH-002,2026-02-19,Feed,182200,,,"Homemade feed 55000; starter feed 24000; finisher feed 103200",Second batch Expenditure + Sales
+EXP-008,BATCH-002,2026-02-19,Vaccine,12000,8,1500,"Vaccine",Second batch Expenditure + Sales
+EXP-009,BATCH-002,2026-02-19,Booster,4000,,,"Two booster lines: 2500 and 1500",Second batch Expenditure + Sales
+EXP-010,BATCH-002,2026-02-19,Separation,6000,1,6000,"Separation",Second batch Expenditure + Sales
+EXP-011,BATCH-002,2026-02-19,Grinding,5500,1,5500,"Grinding",Second batch Expenditure + Sales
+EXP-012,BATCH-002,2026-02-19,Calcium,300,3,100,"Calcium",Second batch Expenditure + Sales
+EXP-013,BATCH-002,2026-02-19,Printing flyer,0,14,,"Quantity recorded but total cost blank",Second batch Expenditure + Sales
+EXP-014,BATCH-002,2026-02-19,Uncategorized,10000,,,"Blank item row had a recorded total of 10000",Second batch Expenditure + Sales
+EXP-015,BATCH-003,2026-03-26,Transport,7000,1,7000,"Transport",3rd Batch
+EXP-016,BATCH-003,2026-03-26,Vaccine,1500,1,1500,"Vaccine",3rd Batch
+EXP-017,BATCH-003,2026-03-26,Drugs/Medications,9000,1,9000,"Drugs and medications",3rd Batch
+EXP-018,BATCH-004,2026-04-27,Wood shavings,3000,3,1000,"Three bags",4th Batch
+EXP-019,BATCH-004,2026-04-27,Glucose and antibiotics,4500,2,,"Two glucose and antibiotics",4th Batch
+EXP-020,BATCH-004,2026-04-27,Charcoal,10000,1,10000,"Charcoal",4th Batch
+EXP-021,BATCH-004,2026-04-27,Transport,7000,1,7000,"Transport",4th Batch
+EXP-022,BATCH-005,2026-06-29,Feed,276000,12,23000,"Starter feed",5th Batch
+EXP-023,BATCH-005,2026-06-29,Vaccine,13500,9,1500,"Vaccine",5th Batch
+EXP-024,BATCH-005,2026-06-29,Calcium,800,8,100,"Calcium",5th Batch
+EXP-025,BATCH-005,2026-06-29,Kerosene,5400,3,1800,"Kerosene",5th Batch
+EXP-026,BATCH-005,2026-06-29,Transport,7000,2,3500,"Transport",5th Batch
+EXP-027,BATCH-005,2026-06-29,Medication,9000,1,9000,"Medication",5th Batch
+EXP-028,BATCH-006,2026-07-30,Transport,0,,,"Transport listed but total blank",6th batch
+EXP-029,BATCH-006,2026-07-30,Starter Feed,0,,,"Listed as zero in source; confirm before treating as free",6th batch
+EXP-030,BATCH-006,2026-07-30,Vaccine,0,,,"Listed as zero in source; confirm before treating as free",6th batch
+EXP-031,BATCH-006,2026-07-30,Calcium,0,,,"Listed as zero in source; confirm before treating as free",6th batch
+EXP-032,BATCH-006,2026-07-30,Booster,0,,,"Listed as zero in source; confirm before treating as free",6th batch
+EXP-033,BATCH-006,2026-07-30,Kerosene,0,,,"Listed as zero in source; confirm before treating as free",6th batch
+EXP-034,BATCH-006,2026-07-30,Medication,0,,,"Listed as zero in source; confirm before treating as free",6th batch

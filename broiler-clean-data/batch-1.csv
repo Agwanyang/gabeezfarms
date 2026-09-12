@@ -1,0 +1,2 @@
+batchId,batchName,arrivalDate,numberOfBirds,costPerBird,transportCost,deathsOnArrival,notes,sourceSheet
+BATCH-001,First Batch,2026-02-19,50,1750,3500,0,"Original first batch expenditure; sales and later deaths not yet imported",First Batch Expenditure

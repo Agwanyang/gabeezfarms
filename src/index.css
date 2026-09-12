@@ -10,6 +10,7 @@
 
 body { margin: 0; min-width: 320px; background: radial-gradient(circle at 12% 12%, rgba(184, 225, 195, 0.42), transparent 30%), linear-gradient(135deg, #f7fbf7 0%, #edf5ef 52%, #e4f0e8 100%); }
 .app-layout { min-height: 100vh; }
+.page-content { width: 100%; min-width: 0; box-sizing: border-box; margin-left: 296px; padding: 32px; }
 .sidebar-shell { position: fixed; z-index: 200; top: 20px; bottom: 20px; left: 20px; width: 256px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,0.8); border-radius: 30px; background: linear-gradient(160deg, rgba(255,255,255,0.82), rgba(233,247,237,0.68)); box-shadow: 0 24px 60px rgba(34,83,52,0.15), inset 0 1px 0 rgba(255,255,255,0.9); backdrop-filter: blur(28px) saturate(135%); -webkit-backdrop-filter: blur(28px) saturate(135%); transition: transform 0.3s ease; }
 .sidebar-brand { padding: 26px 22px 22px; border-bottom: 1px solid rgba(45,102,65,0.1); }
 .sidebar-logo { width: 44px; height: 44px; display: grid; place-items: center; margin-bottom: 14px; border-radius: 15px; background: linear-gradient(135deg, #8ad59d, #2b9a57); color: white; font-size: 18px; font-weight: 800; box-shadow: 0 8px 18px rgba(43,154,87,0.22); }
@@ -30,7 +31,14 @@ body { margin: 0; min-width: 320px; background: radial-gradient(circle at 12% 12
 .mobile-menu-button span { display: block; width: 20px; height: 2px; border-radius: 999px; background: #286540; }
 .mobile-nav > span { margin-left: 8px; color: #173d27; font-size: 15px; font-weight: 750; }
 .sidebar-overlay { position: fixed; z-index: 190; inset: 0; background: rgba(22,55,34,0.22); backdrop-filter: blur(4px); }
-@media (max-width: 767px) { .sidebar-shell { top: 76px; bottom: 12px; left: 12px; width: min(278px, calc(100vw - 24px)); border-radius: 26px; } }
+@media (min-width: 768px) and (max-width: 1199px) {
+	.sidebar-shell { left: 14px; width: 220px; border-radius: 26px; }
+	.page-content { margin-left: 248px; padding: 24px; }
+}
+@media (max-width: 767px) {
+	.sidebar-shell { top: 76px; bottom: 12px; left: 12px; width: min(278px, calc(100vw - 24px)); border-radius: 26px; }
+	.page-content { margin-left: 0; padding: 72px 16px 16px; }
+}
 
 .farm-footer { padding: 56px 20px 24px; background: linear-gradient(180deg, #f4faf5 0%, #e6f2e9 100%); }
 .farm-footer-panel { max-width: 1152px; margin: 0 auto; padding: 30px 34px 20px; border: 1px solid rgba(255,255,255,0.92); border-radius: 32px; background: rgba(255,255,255,0.64); box-shadow: 0 20px 55px rgba(44,103,61,0.13), inset 0 1px 0 rgba(255,255,255,0.9); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }

@@ -1,0 +1,7 @@
+expenseId,batchId,date,type,amount,quantity,unitPrice,notes,sourceSheet
+EXP-001,BATCH-001,2026-02-19,Feed,120000,5,,"Feed recorded as a combined total",First Batch Expenditure
+EXP-002,BATCH-001,2026-02-19,Medication,10000,1,10000,"Medication",First Batch Expenditure
+EXP-003,BATCH-001,2026-02-19,Vaccine,15000,1,15000,"Vaccine",First Batch Expenditure
+EXP-004,BATCH-001,2026-02-19,Kerosene,8000,1,8000,"Kerosene",First Batch Expenditure
+EXP-005,BATCH-001,2026-02-19,Saw Shaving,3000,2,1500,"Saw shaving",First Batch Expenditure
+EXP-006,BATCH-001,2026-02-19,Charcoal,5000,1,5000,"Charcoal",First Batch Expenditure

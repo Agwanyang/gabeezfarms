@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { collection, addDoc, getDocs, deleteDoc, updateDoc, doc, serverTimestamp } from 'firebase/firestore'
+import { collection, addDoc, getDocs, deleteDoc, updateDoc, setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import PageLayout from '../components/PageLayout'
+import { cleanBroilerBatches, cleanBroilerExpenses } from '../data/cleanBroilerData'
 
 function Broilers() {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -49,6 +50,22 @@ function Broilers() {
   useEffect(() => { fetchAll() }, [])
 
   const showMsg = (msg) => { setSuccess(msg); setTimeout(() => setSuccess(''), 3000) }
+
+  const importCleanBatches = async () => {
+    if (!window.confirm('Import the cleaned Batch 1-6 records? Existing records will not be deleted.')) return
+
+    try {
+      await Promise.all([
+        ...cleanBroilerBatches.map(({ id, ...batch }) => setDoc(doc(db, 'broilerBatches', id), { ...batch, createdAt: serverTimestamp() }, { merge: true })),
+        ...cleanBroilerExpenses.map(({ id, ...expense }) => setDoc(doc(db, 'broilerExpenses', id), { ...expense, createdAt: serverTimestamp() }, { merge: true })),
+      ])
+      showMsg('Cleaned Batch 1-6 records imported without deleting existing data.')
+      fetchAll()
+    } catch (err) {
+      console.error(err)
+      showMsg('Import failed. Check your Firebase permissions and try again.')
+    }
+  }
 
   const getBatchStats = (batch) => {
     const batchExpenses = expenses.filter(e => e.batchId === batch.id)
@@ -136,9 +153,18 @@ function Broilers() {
   return (
     <PageLayout>
       {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-slate-800">Broiler Records</h1>
-        <p className="text-slate-500 mt-1 text-sm">Track batches, expenses, deaths, sales and profit/loss</p>
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-bold text-slate-800">Broiler Records</h1>
+          <p className="text-slate-500 mt-1 text-sm">Track batches, expenses, deaths, sales and profit/loss</p>
+        </div>
+        <button
+          type="button"
+          onClick={importCleanBatches}
+          className="rounded-xl border border-green-200 bg-white px-4 py-2 text-sm font-semibold text-green-700 shadow-sm hover:bg-green-50"
+        >
+          Import clean Batch 1-6
+        </button>
       </div>
 
       {success && (

@@ -13,14 +13,7 @@ function PageLayout({ children }) {
   return (
     <div className="app-layout">
       <Sidebar />
-      <div style={{
-        marginLeft: isMobile ? '0' : '296px',
-        flex: 1,
-        padding: isMobile ? '16px' : '32px',
-        paddingTop: isMobile ? '72px' : '32px',
-        width: '100%',
-        boxSizing: 'border-box'
-      }}>
+      <div className={`page-content${isMobile ? ' is-mobile' : ''}`}>
         {children}
       </div>
     </div>
