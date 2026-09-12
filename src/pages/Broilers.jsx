@@ -59,7 +59,7 @@ function Broilers() {
         ...cleanBroilerBatches.map(({ id, ...batch }) => setDoc(doc(db, 'broilerBatches', id), { ...batch, createdAt: serverTimestamp() }, { merge: true })),
         ...cleanBroilerExpenses.map(({ id, ...expense }) => setDoc(doc(db, 'broilerExpenses', id), { ...expense, createdAt: serverTimestamp() }, { merge: true })),
         ...cleanBroilerDeaths.map(({ id, ...death }) => setDoc(doc(db, 'broilerDeaths', id), { ...death, createdAt: serverTimestamp() }, { merge: true })),
-        ...cleanBroilerSales.map(({ id, ...sale }) => setDoc(doc(db, 'broilerSales', id), { ...sale, createdAt: serverTimestamp() }, { merge: true })),
+        ...cleanBroilerSales.filter(sale => !sale.isProjection).map(({ id, ...sale }) => setDoc(doc(db, 'broilerSales', id), { ...sale, createdAt: serverTimestamp() }, { merge: true })),
       ])
       showMsg('Cleaned Batch 1-6 records imported without deleting existing data.')
       fetchAll()

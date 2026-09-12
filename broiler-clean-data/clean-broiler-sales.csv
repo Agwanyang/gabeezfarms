@@ -7,3 +7,7 @@ SALE-005,BATCH-001,2026-01-08,2,,11000,,"Sale row 5",First Birds Batch Sales
 SALE-006,BATCH-001,2026-01-08,3,,6000,D,"Buyer marker D",First Birds Batch Sales
 SALE-007,BATCH-001,2026-01-08,1,0,0,D,"Price missing in original sheet; included in bird count but excluded from revenue",First Birds Batch Sales
 SALE-008,BATCH-001,2026-01-08,1,,8500,,"Sale row 8",First Birds Batch Sales
+SALE-009,BATCH-002,2026-02-19,70,,7500,,"Source records 70 birds sold at 7500 each; aggregate sale row",Second batch Expenditure + Sales
+SALE-010,BATCH-003,,29,,0,GH6,"Sale count from Poultry Death sheet; sale date and price not provided",Poultry Death
+SALE-011,BATCH-003,,44,,0,GH2,"Sale count from Poultry Death sheet; sale date and price not provided",Poultry Death
+SALE-012,BATCH-003,2026-03-26,100,2.3,8000,,"Recorded/projected 6-week sale; not imported as actual because it conflicts with 73 actual sales",3rd Batch

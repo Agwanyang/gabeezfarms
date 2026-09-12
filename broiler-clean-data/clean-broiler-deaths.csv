@@ -1,2 +1,12 @@
 deathId,batchId,date,numberOfDeaths,cause,notes,sourceSheet
 DEATH-001,BATCH-001,2026-01-08,5,,"Source records 5 birds died; cause not provided",Poultry Death
+DEATH-002,BATCH-002,2026-02-19,10,,"Source says 10 died; remaining figures in the sheet conflict (70/71)",Second batch Expenditure + Sales
+DEATH-003,BATCH-003,2026-03-30,1,,"GH6",Poultry Death
+DEATH-004,BATCH-003,2026-04-04,2,,"GH6",Poultry Death
+DEATH-005,BATCH-003,2026-04-07,1,,"GH2",Poultry Death
+DEATH-006,BATCH-003,2026-04-05,9,,"GH6",Poultry Death
+DEATH-007,BATCH-003,2026-04-05,2,,"GH2",Poultry Death
+DEATH-008,BATCH-003,2026-04-06,1,,"GH6",Poultry Death
+DEATH-009,BATCH-003,2026-04-10,8,,"GH6",Poultry Death
+DEATH-010,BATCH-003,2026-04-12,1,,"GH6",Poultry Death
+DEATH-011,BATCH-003,2026-04-13,2,,"GH6",Poultry Death

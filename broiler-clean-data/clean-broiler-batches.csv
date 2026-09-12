@@ -1,7 +1,7 @@
 batchId,batchName,arrivalDate,numberOfBirds,costPerBird,transportCost,deathsOnArrival,notes,sourceSheet
 BATCH-001,First Batch,2026-02-19,50,1750,3500,0,"Verified first-batch expenditure; sales and later deaths not yet imported",First Batch Expenditure
 BATCH-002,Second Batch,2026-02-19,80,2181.25,0,0,"30 chicks at 2900 and 50 chicks at 1750 are one batch; weighted chick cost is 174500; sheet shows conflicting 71/70 remaining figures",Second batch Expenditure + Sales
-BATCH-003,Third Batch,2026-03-26,100,1750,7000,0,"Deaths section is empty; no sales visible",3rd Batch
+BATCH-003,Third Batch,2026-03-26,100,1750,7000,0,"Poultry Death sheet records 27 deaths and 73 sold across GH6 and GH2; 0 remaining",3rd Batch
 BATCH-004,Fourth Batch,2026-04-27,100,1120,7000,0,"Feed, vaccine, calcium, kerosene and sales fields are blank",4th Batch
 BATCH-005,Fifth Batch,2026-06-29,120,1030,7000,0,"103 birds went to Hannah's side; sales section is blank; crop data in other columns was excluded",5th Batch
 BATCH-006,Sixth Batch,2026-07-30,100,1280,0,0,"Transport is listed without a total; zero values in the source appear to be placeholders, not confirmed spending",6th batch
